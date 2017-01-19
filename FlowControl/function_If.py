@@ -20,7 +20,6 @@ print()
 print("############################################")
 
 ### new test 
-yournum = 0
 try:
 	yournum = int(input("Enter your number: "))
 except ValueError:
