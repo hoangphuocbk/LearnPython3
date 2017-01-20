@@ -21,9 +21,11 @@ wf = open(newfile,'w')
 reader = csv.reader(f)
 writer = csv.writer(wf, delimiter=',')
 
+# eliminate column 1 that is not necessary
 for line in reader:
 	newline = line[1:]
 	writer.writerow(newline)
 
+# close all files
 f.close()
 wf.close()
