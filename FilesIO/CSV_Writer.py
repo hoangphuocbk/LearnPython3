@@ -8,7 +8,7 @@ import csv
 # open the existed file
 f = open('SampleCSVFile.csv','r')
 # set name for the new file
-newfile = 'NewCSVFile'
+newfile = 'NewCSVFile.csv'
 
 # check if the new file's already existed
 if(os.path.exists(newfile)):
@@ -19,10 +19,11 @@ if(os.path.exists(newfile)):
 wf = open(newfile,'w')
 
 reader = csv.reader(f)
-writer = csv.writer(wf, delimiter = '\t')
+writer = csv.writer(wf, delimiter=',')
 
 for line in reader:
-	writer.writerow(line)
+	newline = line[1:]
+	writer.writerow(newline)
 
 f.close()
 wf.close()
