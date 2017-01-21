@@ -1,11 +1,29 @@
 #!/bin/bash
+  
+ # Install pip first
+ if [ hash pip3 2>/dev/null; ]
+ then
+ 	echo "You already installed python-pip"
+ else
+ 	echo "You don't install python-pip"
+ 	echo "Do you want to install it? (y/n)"
+ 	read input_var
+ 	if [ $input_var == "y" ]
+ 		then
+ 			sudo apt-get install -y python3-pip
+ 	fi
+ fi
 
-# Install python-mysql-connector
-wget https://cdn.mysql.com//Downloads/Connector-Python/mysql-connector-python-py3_2.1.5-1ubuntu14.04_all.deb
+# Install necessary packages
+sudo apt-get -y install python-dev libmysqlclient-dev
+sudo pip install wheel
 
-sudo dpkg -i PACKAGE.deb
+# Install MySQL connector for python
+sudo pip3 install --egg -r ./requirements.txt
 
-rm mysql-connector-python-py3_2.1.5-1ubuntu14.04_all.deb	# delete file
-
-# Install mysql-client
-sudo apt-get install -y mysql-client
+if [ $? == 0 ]
+then
+	echo "MySQL connector was installed successfully~"
+else
+	echo "Installing MySQL connector was failed~"
+fi
