@@ -3,9 +3,9 @@
  # Install pip first
  if [ hash pip3 2>/dev/null; ]
  then
- 	echo "You already installed python-pip"
+ 	echo "You already installed python3-pip"
  else
- 	echo "You don't install python-pip"
+ 	echo "You don't install python3-pip"
  	echo "Do you want to install it? (y/n)"
  	read input_var
  	if [ $input_var == "y" ]
