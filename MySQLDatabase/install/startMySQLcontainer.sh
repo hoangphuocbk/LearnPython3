@@ -15,6 +15,8 @@ else
 fi
 
 # Run docker MySQL container
+# Read MySQL configuration
+source ./MySQLConfig.txt
 
 mkdir ~/mysqlDir
-sudo docker run --name mysql-server -p 3306:3306 -v ~/mysqlDir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=yoursecret -d mysql
+sudo docker run --name mysql-server -p $mysql_port:3306 -v ~/mysqlDir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=$mysql_pass -e MYSQL_USER=$mysql_user -d mysql
