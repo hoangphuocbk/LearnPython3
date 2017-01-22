@@ -28,7 +28,7 @@ class Student(SchoolMember):
 
 if __name__ == '__main__':
 	t1 = Teacher("Thao", 25, 20000)
-	s1 = Student("Joshual",21,10)
+	s1 = Student("Joshual", 21, 10)
 
 	t1.tell()
 	s1.tell()
