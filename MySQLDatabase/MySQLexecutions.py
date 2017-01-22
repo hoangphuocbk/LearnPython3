@@ -16,11 +16,11 @@ if __name__ == '__main__':
 	cursor = connection.cursor()
 	
 	# insert command
-	sql = insert("hoangphuocbk2.07@gmail.com", "secret")
+	sql = insert("youremail@gmail.com", "secret")
 	print(sql)
 	cursor.execute(sql)
 	
-	sql = insert("webmaster@python.org", "very-secret")
+	sql = insert("python@python.org", "very-secret")
 	cursor.execute(sql)
 	
 	# query command
