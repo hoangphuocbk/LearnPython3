@@ -16,7 +16,7 @@ class Graph:
 			self.__graph_dict[vertex] = []
 	
 	# add new edge
-	def add_edge(edge = ()):
+	def add_edge(self, *edge):
 		edge = set(edge)
 		(vertex1, vertex2) = tuple(edge)
 		flag = True
@@ -78,8 +78,8 @@ if __name__ == '__main__':
 	print(g.get_vertices())
 	print(g.get_edges())
 	# print(g)
-	print("############ add new edge############")
-	
-	new_edge = {"a" , "f"}
-	g.add_edge(new_edge)
+	print("############ add new edge a - f ############")
+	g.add_edge("a" , "f")
+	print("############ add new edge x - y ############")
+	g.add_edge("x" , "y")
 	print(g)
