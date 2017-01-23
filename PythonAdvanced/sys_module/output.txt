@@ -1,0 +1,12 @@
+Enter a number: 1
+Inverse of 1 is 1.0
+Enter a number: 2
+Inverse of 2 is 0.5
+Enter a number: 5
+Inverse of 5 is 0.2
+Enter a number: 0
+Enter a number: 7
+Inverse of 7 is 0.14285714285714285
+Enter a number: 3
+Inverse of 3 is 0.3333333333333333
+Enter a number: ciao
