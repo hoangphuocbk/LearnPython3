@@ -39,5 +39,6 @@ for suffix in range (15,17):
 	current.start()
 
 for i in check_results:
+	# the operation will block util the thread terminates
 	i.join()
 	print("Status from {0} is {1}.".format(i.ip, i.status()))
