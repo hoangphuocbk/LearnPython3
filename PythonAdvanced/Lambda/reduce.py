@@ -6,7 +6,7 @@ import functools
 max = lambda x, y: x if x > y else y
 
 if __name__ == '__main__':
-	# list example
-	list = [12, 34, 1, 45, 78, 132]
-	
-	print(functools.reduce(max, list))
+    # list example
+    list = [12, 34, 1, 45, 78, 132]
+
+    print(functools.reduce(max, list))
